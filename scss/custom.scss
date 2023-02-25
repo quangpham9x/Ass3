@@ -1,0 +1,36 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+html {
+    font-size: 1.6rem;
+  }
+
+  @include media-breakpoint-up(xs) {
+    html {
+      font-size: 1rem;
+    }
+  }
+  
+  @include media-breakpoint-up(sm) {
+    html {
+      font-size: 0.771rem;
+    }
+  }
+  
+  @include media-breakpoint-up(md) {
+    html {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @include media-breakpoint-up(lg) {
+    html {
+      font-size: 1rem;
+    }
+  }
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
