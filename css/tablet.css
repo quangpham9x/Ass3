@@ -1,0 +1,141 @@
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    
+    #nav-bar a{
+        border-left: 1px solid var(--color_grey);
+        text-align: center;
+    }
+
+    #nav-bar a:nth-child(2){
+        border-right: 1px solid var(--color_grey);
+    }
+
+    /* lam mau nen ben phai dam hon trong thong tin ca nhan  */
+    #personal-info{
+        background-color: var(--color_grey);
+    }
+
+    /* grid cho job-info  */
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-container div:first-child{
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+
+    .grid-container #activity{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .grid-container #education{
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+
+    .grid-container #skill{
+        grid-column: 1/2;
+        grid-row: 3/5;
+    }
+
+    .grid-container #hobby{
+        grid-column: 2/3;
+        grid-row: 4/6;
+    }
+
+    .grid-container #language{
+        grid-column: 1/2;
+        grid-row: 5/7;
+    }
+
+    .grid-container > div {
+        border: 1px solid black;
+        padding: 1rem;
+    }
+
+    .grid-container h2{
+        padding: 0 0 0 1rem;
+    }
+
+    .grid-container{
+        gap: 2rem;
+    }
+
+    /* margin top cua jobinfo canh chinh jobinfo */
+    #job-info{
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    /*tao luoi cho chung chi*/
+    #certificate .cer-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 2rem;
+    }
+    
+    /*tao khoang trong ben tren*/
+    #certificate h2.section-title{
+        padding-top: 2rem;
+    }
+    
+    /*them vien trai cho khung thu 2 trong phan chung chi*/
+    .cer-grid > div:nth-child(2){
+        border-left: 1px solid  #d6c08d;
+        padding-left: 1rem;
+    }
+    
+    /*tao le cach 2 dong trong phan chung chi, ngan cach 2 dong*/
+    #certificate hr{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        border: 0;
+        height: 0.0625rem;
+        background-color:#d6c08d;
+    }
+    
+    /*tao flex cho container con*/
+    .container-cer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* do rong cho img full  */
+    .container-cer img{
+        width: 100%;
+    }
+
+    /*styling phan du an*/
+    /* khung cha class = flex chua 3 khung con, se thiet ke theo layout flex */
+    #project .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* tao do rong cho ca noi dung phan du an  */
+    #project .container{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* tao do rong bang nhau cho 3 khung nam trong khung du an */
+    /* thay vi de 33.33% ta de 32% vi de lai khoang trong can giua cho cac khung*/
+    #project .flex .container-pro{
+        width: 32%;
+    }
+
+    /* margin bottom cho khung project */
+    #project{
+        margin-bottom: 2rem;
+    }
+    
+    /* styling chi tiet du an  */
+
+    
+}   
+

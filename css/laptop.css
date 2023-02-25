@@ -1,0 +1,901 @@
+/* styling cho tat ca kich thuoc web */
+:root{
+    --color_blue: rgb(12, 193, 224); /*mau sac hien thi chung cho web*/
+    --color_grey: rgb(234, 238, 241);
+}
+
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+a{text-decoration: none;}
+    
+    
+i{
+    color: var(--color_blue);
+}
+
+.mt-6{
+    margin-top: 10rem;
+}
+
+.bg-grey {
+    background: #f7f7f7;
+}
+
+/*tao style cho chu hien tai khung kinh nghiem*/
+#exp p:nth-child(2) , .exp-status{
+    display: inline-block;
+}
+
+.exp-status{
+    padding: 0.1rem;
+    background-color: var(--color_blue);
+    color: #fff;
+    border: 1px solid var(--color_blue);
+    border-radius: 20%;
+}
+
+/*grid cua 6 khung con*/
+    /*canh trai padding cho 6 khung va canh tren*/
+    #job-info > div{
+        /* padding: 1rem 0 0 1.5rem; */
+        border: 0.1rem solid #ecebeb;
+        border-width: thin;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto auto;
+        align-content: start;
+        
+    }
+    
+    /*dat cac phan tu con vao hang cot 6 khung*/
+    #job-info > div h2{
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    
+    #job-info ul, #hobby > .hobby-container{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+    
+    #job-info > div > i{
+        grid-column: 3/-1;
+        grid-row: 1/2;
+    }
+    
+/* chinh bullet cac khung kinh nghiem, hoc van, hanh dong */
+#exp li, #education li, #activity li{
+    position: relative;
+}
+
+/*them bullet truoc content 6 khung va di chuyen sang trai va len tren */
+#exp li::before, #education li::before, #activity li::before{
+    content: '\2022'; /*ky tu circle*/
+    color: var(--color_blue);
+    display: inline-block;
+    margin-left: -1rem;
+    font-size: 1.1rem;
+    position: absolute;
+    top: -0.2rem;
+}
+
+/*hien thi chung cho cac span trong ngon ngu va ky nang*/
+#language span, #skill span{
+    display: inline-block;
+    width: 2rem;
+}
+/*tao styling cho ngon ngu*/
+/*ielts 7.0*/
+#language li:first-child span{
+    height: 0.0625rem; 
+}
+
+#language li:first-child span:not(:last-child){
+    background-color: var(--color_blue);
+}
+
+#language li:first-child span:last-child{
+    background-color: var(--color_grey);
+}
+
+/*JLPT*/
+#language li:last-child span{
+    height: 0.08rem; 
+}
+
+#language li:last-child span{
+    background-color: var(--color_blue);
+}
+
+#language li:last-child span:not(:first-child){
+    background-color: var(--color_grey);
+}
+
+/*tao styling cho ky nang*/
+/*tao kich thuoc cho span*/
+#skill li:not(:nth-child(2)) span{
+    height: 0.0625rem; 
+}
+
+#skill li:nth-child(2) span{
+    height: 0.08rem; 
+}
+
+/*tao mau cho cac span*/
+/*tao mau xanh*/
+#skill li span:first-child,
+#skill li:nth-child(2) span:nth-child(2),
+#skill li:nth-child(3) span:nth-child(2)
+{
+    background-color: var(--color_blue);
+}
+
+/*tao mau xam*/
+#skill li span:last-child,
+#skill li:nth-child(3n+1) span:nth-child(2)
+{
+    background-color: var(--color_grey);
+}
+
+ /*canh le cho 6 khung*/
+/*div la flex chua cac icon am nhac, choi game, du lich va nau an*/
+#job-info li, #job-info #hobby > .hobby-container{
+    margin-top: 2rem;
+}
+    /*flex cho phan tu con chua cac icon cua hobby*/
+    #hobby > .hobby-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    /*chinh kich thuoc va color cho cac icon trong toan bo khung cha job-in chua 6 khung con*/
+    #job-info > div > i{
+        color: black;
+        font-size: 1.8rem;
+    }
+    
+    #job-info > div > div > i{
+        color: var(--color_blue);
+    }
+
+/*chinh kich thuoc hinh anh theo do rong width cua div.container-pro*/
+#project img{
+    width: 100%;
+}
+
+ /* tao khong trong' phia tren cho ca khung du an  */
+    
+ #project .section-title{
+    padding: 2rem 0 2rem 0;
+}
+
+ /* thiet ke phan noi dung cua du an  */
+    /* sau hinh anh la den tieu de du an, khong can phai style nhieu  */
+    .container-pro .title{
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+    /* div thu 2 se theo layout flex  */
+    .container-pro .flex-child-pro{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    /*tao border cho 3 khung cua du an*/
+    .container-pro{
+        border: 1px solid #e4e4e4;
+    }
+
+    /* style color cho icon cua 3 khung cua khung du an  */
+    .container-pro i{
+        color: rgb(99, 98, 98);
+    }
+
+    /* padding cho noi dung table  */
+    .container-pro table{
+        border-collapse: collapse;
+        border: none;
+        width: 100%;
+    }
+
+    /* canh chinh noi dung len dau va tao border tren duoi  */
+    .container-pro table td{
+        padding: 0.5rem 0.1rem 0.1rem 0.3rem;
+        vertical-align: top;
+        border-top: 1px solid #bdbdbd;
+        border-bottom: 1px solid #bdbdbd;
+    }
+    
+    /* tat border tren cung va duoi cung cua bang trong phan du an  */
+    /* -n+2 tuc la lay phan tu thu 1 vs 2 */
+    .container-pro table tr:first-child td{
+        border-top: none;
+    }
+    
+    .container-pro table tr:last-child td{
+        border-bottom: none;
+    }
+
+    /* styling mau xanh cho so 2021 */
+    .flex-child-pro > span{
+        border: 1px solid var(--color_blue);
+        background-color: var(--color_blue);
+        border-radius: 20%;
+    }
+    
+    /* padding cho ca dong chua 2021 funix developer*/
+    /* tao border cho noi dung  */
+    .flex-child-pro{
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+        border-top: 1px solid #bdbdbd;
+        border-bottom: 1px solid #bdbdbd;
+    }
+    
+    /* styling chung cho phan footer va chi tiet du an thuoc cau hinh tablet vs mobile  */
+    @media only screen and (max-width: 768px){
+    /* an doan van  */
+        #footer p{
+            display: none;
+        }
+
+        #footer ul{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+
+        #footer li{
+            text-align: center;
+            background-color: var(--color_blue);
+            border-radius: 50%;
+            margin: 0rem 1rem 0 1rem;
+        }
+
+        #footer i{
+            color: white;
+            font-size: 3.9vh;  /* rat quan trong de giup cho icon on dinh  */
+        }
+
+        #footer{
+            padding: 2rem 0 2rem 0;
+            margin: 2rem 0 0 0;
+        }
+
+        /* styling chi tiet du an  */
+
+    .grid{
+        display: grid;
+    }
+
+    .grid-child h2{
+        background-color: #ececec;
+        margin: 0;
+    }
+
+    .grid ul{
+        margin: 0;
+        padding: 0;
+        background-color: #ececec;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* .grid-child{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+    } */
+
+    .grid i{
+        color: black;
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+    }
+
+    .grid li{
+
+        padding: 1rem 2rem;
+        position: relative;
+        border: 1px solid #524f4f;
+        border-left: none;
+        border-right: none;
+        margin: 0 2rem;
+    }
+
+    .grid-child{
+        margin: 2rem 2rem 0 2rem;
+    }
+
+    .goals ul li:nth-child(2){
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .goals li:nth-child(1){
+        border-top: 1px solid black;
+    }
+
+    .goals li:nth-child(4){
+        border-bottom: 0;
+    }
+    
+
+    .grid-child h2{
+        padding: 1rem 2rem;
+        color: rgb(4, 8, 255);
+    }
+
+    .grid{
+        background-color: rgb(4, 8, 255);
+    }
+
+    /* styling cho phan scopes  */
+    .scopes li:nth-child(2){
+        border-bottom: none;
+        border-top: none;
+    }
+
+    .scopes li:nth-child(1){
+        border-bottom: none;
+    }
+
+    /* styling cho phan team  */
+    .team li:nth-child(n+1)
+    {
+        border-top: none;
+        border-bottom: none;
+    }
+    .team li:nth-child(1){
+        border-top: 1px solid black;
+    }
+
+    .team i{
+        left: 50%;
+    }
+    
+    /* styling cho phan primary */
+    .primary li{
+        padding-top: 3rem;
+    }
+
+    .primary li:nth-child(2){
+        border-top: none;
+    }
+    .primary li:nth-child(1){
+        border-bottom: none;
+    }
+    
+
+    /* styling cho phan timeline  */
+
+    .timeline li{
+        padding-top: 3rem;
+    }
+
+    .timeline li:nth-child(n+1){
+        border-bottom: 1px dashed #75ff75f8;
+        border-top: none;
+    }
+
+    .timeline li:nth-child(1){
+        border-top: 1px solid black;
+    }
+
+    }
+
+    /* styling cho phan team vi hinh anh de len chu~ neu man hinh nho hon 470 */
+    @media only screen and (max-width: 470px){
+        .team i{
+            left: 10rem;
+        }
+    }
+
+
+
+    /* an hien thong tin cho phan nhap email */
+    .hidden{
+        display: none;
+    }
+
+    /* styling cho phan email */
+    #personal-info{
+        position: relative;
+    }
+
+    #personal-info form{
+        position: absolute;
+        top: 3.5rem;
+        left: 0.6rem;
+    }
+
+    #job-info ul, #job-info .hobby-container{
+        display: none;
+    }
+
+    /* styling cho phan show more  */
+    /* hide het cac view more  */
+    /* rat quan trong */
+    #job-info > div {
+        position: relative;
+    }
+
+    /* rat quan trong */
+
+    #job-info .view-more{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(99, 98, 98, 0.6);
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #332d2d;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity 1000ms, visibility 1000ms;
+        transition: opacity 1000ms, visibility 1000ms;
+    }
+
+    
+
+    #job-info > div:hover .view-more{
+        visibility: visible;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    #job-info .view-more > div:active{
+        background-color: #d6c08d;
+
+    }
+
+    #job-info .view-more > div{
+        background-color: #212529;
+        display: flex;
+        align-items: center;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        color: #fff;
+        -webkit-transition: translate 200ms;
+        transition: translate 200ms;
+    }
+
+    #job-info .view-more > div:hover{
+        translate: -1px -1px;
+    }
+
+    .view-more p{
+        margin: 0;
+    }
+
+    /* an tat ca nut view less  */
+    #job-info > div button{
+        display: none;
+    }
+
+
+    .animated {
+        -webkit-animation: 1600ms pulsate;
+        -moz-animation: 1600ms pulsate;
+        -ms-animation: 1600ms pulsate;
+        -o-animation: 1600ms pulsate;
+        animation: 1600ms pulsate;
+    }
+
+    @keyframes pulsate {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+        100% { transform: scale(1); }
+      }
+      @-webkit-keyframes pulsate {
+        0% { -webkit-transform: scale(1); }
+        50% { -webkit-transform: scale(1.3); }
+        100% { -webkit-transform: scale(1); }
+      }
+      @-moz-keyframes pulsate {
+        0% { -moz-transform: scale(1); }
+        50% { -moz-transform: scale(1.3); }
+        100% { -moz-transform: scale(1); }  
+      }
+      @-ms-keyframes pulsate {
+        0% { -ms-transform: scale(1); }
+        50% { -ms-transform: scale(1.3); }
+        100% { -ms-transform: scale(1); }  
+      }
+      @-o-keyframes pulsate {
+        0% { -o-transform: scale(1); }
+        50% { -o-transform: scale(1.3); }
+        100% { -o-transform: scale(1); }  
+      }
+    
+/* styling cho tat ca kich thuoc web  */
+
+
+
+@media only screen and (min-width: 768px) {
+    
+    #nav-bar{
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    
+    /*Banner*/
+    #banner{
+        height: 300px;
+        position: relative;
+        background-image: url("../images/banner.jpg"); /*Chen background*/
+        background-position: center top;
+    }
+    /*Chinh chu giua khung hinh*/
+    #banner div{
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+    
+    
+    /*Chinh nav*/
+    #nav-bar{
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+    }
+    
+    
+    #nav-bar div{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    
+    #nav-bar a{
+        text-transform: uppercase;
+        color: black;
+        display: inline-block;
+        padding: 0.6rem;
+        border-left: 1px solid #efeeee;
+        font-size: 0.6rem;
+    }
+    
+    /*Set font color cho icon trong nav*/
+    #nav-bar i{
+        font-size: 0.6rem;
+        color: var(--color_blue);
+    }
+
+    /* chinh do rong 3 img nam trong 3 div co class container-cer  */
+    .container-cer img{
+        width: 40%;
+    }
+    
+    /*Styling cho thong tin ca nhan*/
+    /*Su dung flexbox*/
+    #about > div{
+        display: flex;
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+    }
+    
+    #about h2{
+        padding-bottom: 1rem;
+    }
+    
+    #about .section-title{
+        font-size: 1.1rem;
+    }
+    
+    #target, #personal-info{
+        width: 50%;
+    }
+    
+    /*Them icon chinh sua trong phan thong tin ca nhan*/
+    .personal-icon {
+        padding-top: 2rem ;
+    }
+    
+    #target{
+        padding: 5rem 2rem 5rem 2rem;
+    }
+    #personal-info{
+        padding: 5rem 1rem 5rem 3rem;
+    }
+    
+    /*grid cho khung cha job-info*/
+    #job-info{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto auto;
+        width: 61%;
+        margin: 2rem auto 0 auto;
+        gap: 1.1rem;
+    }
+    
+   
+    
+    
+    
+    /* styling cho cac phan tu ul khong thuoc div thu 5,6
+    div thu 5, 6 la cac khung ngon ngu va ky nang */
+    #job-info > div:not(:nth-child(n+5)) ul{
+        margin-bottom: 5rem;
+    }
+    
+    /* theo cong thuc An+B*/
+    /* styling cho ul thuoc div 5,6 la cac khung ngon ngu va ky nang */
+    #job-info > div:nth-child(n+4) ul{
+        margin-bottom: 4rem;
+    }
+    
+    /*tao vong tron cho muc so thich*/
+    #hobby > .hobby-container i{
+        border: 1px solid var(--color_blue);
+        border-radius: 50%;
+        display: inline-block;
+        padding: 0.5rem 0.6rem;
+    }   
+    
+    /* padding cho 6 khung trong phan job-info  */
+    #job-info > div{
+        padding: 1rem;
+    }
+
+    #job-info{
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+
+     /* chinh do rong cho phan chung chi de canh giua noi dung*/
+    #certificate .container{
+        width: 80%;
+        margin: 1rem auto 0 auto;
+
+    }
+    
+    
+    
+    
+    
+    
+    /*tao luoi cho chung chi*/
+    #certificate .cer-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 2rem;
+    }
+    
+    /*tao khoang trong ben tren*/
+    #certificate h2.section-title{
+        padding-top: 2rem;
+    }
+    
+    /*them vien trai cho khung thu 2 trong phan chung chi*/
+    .cer-grid > div:nth-child(2){
+        border-left: 1px solid  #d6c08d;
+        padding-left: 1rem;
+    }
+    
+    /*tao le cach 2 dong trong phan chung chi, ngan cach 2 dong*/
+    #certificate hr{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        border: 0;
+        height: 0.0625rem;
+        background-color:#d6c08d;
+    }
+    
+    /*tao flex cho container con*/
+    .container-cer{
+        display: flex;
+    }
+    
+    /*styling phan du an*/
+    /* khung cha class = flex chua 3 khung con, se thiet ke theo layout flex */
+    #project .flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* tao do rong cho ca noi dung phan du an  */
+    #project .container{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    /* tao do rong bang nhau cho 3 khung nam trong khung du an */
+    /* thay vi de 33.33% ta de 32% vi de lai khoang trong can giua cho cac khung*/
+    #project .flex .container-pro{
+        width: 32%;
+    }
+    
+    /* .flex-child-pro table td{
+        border-top: 1px solid #bdbdbd;
+        border-bottom: 1px solid #bdbdbd;
+    } */
+    
+    /* chinh font cho tieu de nam trong 3 div class = container-cer*/
+#certificate h2{
+    font-size: 1.3rem;
+}
+#certificate h3{
+    font-size: 0.6rem;
+} 
+
+    /* styling footer  */
+    #footer li{
+        display: inline-block;
+        vertical-align: middle;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+    
+    #footer ul{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    #footer i, #footer p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    /* Chinh sua hinh anh ca nhan */
+    .personal-img img{
+        width: 6rem;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 80%;
+        height: 6rem;
+        border: 5px solid #fff;
+    }
+    
+    .personal-img{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        top: -3rem;
+    }
+
+    /* styling footer cho man hinh laptop desktop  */
+    /* styling footer  */
+    #footer li{
+        display: flex;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    #footer ul{
+        display: flex;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+
+    #footer i, #footer p{
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    /* styling phan chi tiet du an */
+    .grid-child h2, .grid-child{
+        background-color: #ececec;
+    }
+
+    .grid-child h2{
+        color: rgb(4, 8, 255);
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 1rem;
+        background-color: rgb(4, 8, 255);
+        
+        gap: 1rem;
+    }
+
+    .grid-child i{
+        color: black;
+    }
+
+    .goals{
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+
+    .team{
+        grid-column: 3/4;
+        grid-row: 1;
+    }
+
+    .timeline{
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+
+    .scopes{
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    .primary{
+        grid-column: 3/4;
+        grid-row: 2;
+    }
+
+    .grid li{
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .grid li > div, .grid li > p{
+        width: 50%;
+    }
+
+    .grid h2{
+        border-bottom: 1px solid black;
+        padding: 1rem;
+    }
+
+    /* chinh sua scopes  */
+    .scopes ul{
+        display: flex;
+    }
+
+    /* chinh sua primary  */
+    .primary li{
+        align-items: center;
+    }
+    
+
+    
+}
+
+/* phan chung cua chi tiet du an  */
+.timeline i{
+    left: 2.5rem;
+    top: 0.2rem;
+    background-color: darkorchid;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.primary i{
+    top: 0.5rem;
+    background-color: rgb(0, 0, 0);
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #fff;
+    width: 2rem;
+    display: block;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

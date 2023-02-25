@@ -1,0 +1,130 @@
+@media only screen and (max-width: 576px){
+    /* chinh sua nav  */
+    body{
+        font-size: 20px;
+    }
+    #nav-bar a{
+    
+        display: block;
+        padding: 0.5rem;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    #nav-bar div{
+        display: none;
+    }
+
+    #nav-bar i, #personal-info i{
+        color: var(--color_blue);
+    }
+
+    /* them mau cho thong tin ca nhan */
+    #target, #personal-info{
+        padding: 3rem 0.3rem;
+    }
+
+    #personal-info{
+        background-color: var(--color_grey);
+    }
+
+    /* styling ul cho phan thong tin ca nhan */
+    #personal-info ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    /* styling cho 6 div trong job-info  */
+    /* canh giua 6 tieu de va 6 icon trong job-info */
+    #job-info > div{
+        margin: 1rem 0;
+        
+    }
+
+    /* padding cho h2 tieu de trong 6 khung cua job-info  */
+    #job-info h2, #job-info i{
+        padding: 1rem;
+    }
+
+    /* grid cho job-info */
+    #job-info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    /* dat 6 khung vao vi tri phu hop voi thiet ke  */
+    #skill{
+        grid-row: 2;
+    }
+
+    #language{
+        grid-row: 3;
+    }
+
+    #activity{
+        grid-row: 4;
+    }
+
+    #education{
+        grid-row: 5
+    }
+
+    /* grid cho chung chi giai thuong  */
+    #certificate .cer-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  auto auto auto;
+    }
+
+    /* margin len dau cua phan chung chi  */
+    #certificate .container{
+        margin: 1rem auto 0 auto;
+    }
+
+    /* padding len dau cho tieu de h2 cua chung chi  */
+    #certificate h2{
+        padding: 2rem 0 0rem 0;
+    }
+
+    /* tao do dong cho hinh anh trong phan chung chi  */
+    #certificate img{
+        width: 100%;
+    }
+
+    /* thay doi font chu cho tieu de trong phan chung chi  */
+    #certificate h3{
+        font-size: 1.2rem;
+    }
+
+    /* tat hr trong phan chung chi  */
+    #certificate hr{
+        border: 0;
+        height: 0;
+        margin: 0;
+    }
+
+    /* tao border cho 3 khung trong phan chung chi  */
+    #certificate .container-cer{
+        border-bottom: 1px solid rgb(240, 103, 103);
+        margin: 2rem 0 0 0;
+    }
+
+    /* tao margin cho 3 khung trong phan du an*/
+    #project .container-pro{
+        margin: 1rem 0 1rem 0;
+    }
+
+    /* styling cho form mail  */
+    #personal-info{
+        padding-bottom: 14rem;
+    }
+
+    #personal-info form, #personal-info input, #personal-info button{
+        width: 98%;
+    }
+
+    #personal-info form{
+        text-align: center;
+    }
+}
