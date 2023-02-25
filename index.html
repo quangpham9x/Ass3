@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="./scss/custom.css">
+	<link rel="stylesheet" href="./css/mobile.css">
+	<link rel="stylesheet" href="./css/tablet.css">	
+	<link rel="stylesheet" href="./css/font.css">
+	<link rel="stylesheet" href="./css/laptop.css">
+	<title>Assignment 03</title>
+</head>
+<body>
+	<!-- chua hinh va chu -->
+	<div class="container-fluid">
+		<div id="banner" style="background-image: url('./images/banner.jpg'); background-position: center top; height: 400px;"></div>
+			<div class="position-absolute text-white top-0
+						start-50 translate-middle 
+						text-center fs-6 container-fluid mt-6">
+				<h1>Phạm Hải Quang</h1>
+				<span>Java Developer</span>
+			</div>
+	</div>
+
+	<div class="container-fluid">
+	<!-- chua thanh menu  -->
+		<div id="nav-bar" class="row px-sm-5 px-md-0 px-lg-0">
+			<nav class="container p-0 m-0 col-sm row">
+				<a href="#" class="col-sm-6 py-sm-3"><i class="icon-user"></i>Thông tin</a>
+				<a href="#" class="col-sm-5 py-sm-3"><i class="icon-doc-text-inv"></i>Lý lịch</a>
+			</nav>
+			<div class="personal-img d-sm-none d-md-block">
+				<!-- <h4>Phạm Hải Quang</h4>
+				<span style="font-size: 0.7rem; color: rgb(201, 199, 199);">Java Developer</span> -->
+				<img src="./images/Pham_Hai_Quang_91.jpg" alt="Hinh ca nhan">
+			</div>
+			<nav class="container p-0 m-0 col-sm row">
+				<a href="#" class="col-sm-6 py-sm-3"><i class="icon-mail-alt"></i>Chứng chỉ</a>
+				<a href="#" class="col-sm-6 py-sm-3"><i class="icon-star-1"></i>Dự Án</a>
+			</nav>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<section id="about" class="bg-grey">
+			<div class="container-sm-fluid p-0 row m-0">
+				<div id="target" class="col-sm-6 p-sm-5">
+					<h2 class="section-title">Mục tiêu nghề nghiệp</h2>
+					<p>
+						Là một sinh viên đã hoàn thành chương trình chứng chỉ Doanh
+						Nghiệp của FUNiX. Em mong muốn mình sẽ được làm việc với vị
+						trí <strong>Java Developer</strong> có thể vận dụng những kiến
+						thức đã được trau dồi và không ngừng học hỏi để phát triển
+						bản thân, cũng như hoàn thành tốt nhất công việc được giao.
+					</p>
+				</div>
+				<div id="personal-info" class="col-sm-6 p-sm-5">
+					<div class="personal-info-container">
+						<h2 class="section-title">Thông tin cá nhân</h2>
+						<ul class="info p-sm-0">
+							<li><span>Giới tính</span> : Nam</li>
+							<li><span>Ngày sinh</span> : 26/12/1991</li>
+							<li><span>Điện thoại</span> : (+84) 964711380</li>
+							<li><span>Email</span> : quangphFX04824@funix.edu.vn</li>
+							<li><span>Địa chỉ</span> : TP Thủ Đức</li>
+							<li><span>Website</span> : https://abc.tech</li>
+						</ul>
+						<div class="personal-icon">
+							<a href=""><i class="icon-twitter"></i></a>
+							<a href=""><i class="icon-facebook"></i></a>
+							<a href=""><i class="icon-gplus"></i></a>
+							<a href=""><i class="icon-linkedin"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+		<!-- nhom 5 khung-->
+		<!-- phan nay duoc thiet ke theo giao dien grid chong` grid 
+		1. grid cha co id = job-info chia thanh 3 cot va 2 dong 
+			+ cot duoc tinh theo ty le bang nhau 1fr 1fr 1fr. Dong` thi de auto
+		2. 6 grid con, moi~ grid chia thanh 2 cot (1fr 1fr) 2 dong thi de auto
+			+ noi dung cua moi grid con chia theo 3 cot deu 1fr, tieu de chiem 2 cot con lai la icon 
+			+ dong` phia duoi' chiem het 3 cot. -->
+		<!-- phan mo ta chi tiet ve cong viec  -->
+	<div class="container-fluid container-job-info">
+		<section id="job-info" class="grid-container">
+			<!-- kinh nghiem lam viec  -->
+			<div id="exp">
+				<h2>Kinh nghiệm</h2>
+				<i class="ic-toolbox"></i>
+				<ul>
+					<li>
+						Công nhân làm ở cty Coretronic
+						<br>
+						<p>05/2022-</p><span class="status exp-status">Đã nghỉ gần đây</span>
+						<p>-Bưng vác, chuẩn bị linh kiện để sản xuất TV
+						</p>
+						
+					</li>
+					<li>
+						Công nhân công ty thiết kế in ấn
+						<p>06/2021 - 04/2022</p>
+						<p>-In ấn các mẫu do thiết kế gửi xuống</p>
+					</li>
+				</ul>
+
+				<div class="view-more">
+					<div>
+						<p>View more</p>
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+
+				<button class="btn btn-primary">View Less</button>
+			</div>
+
+			<!-- giao duc  -->
+			<div id="education">
+				<h2>Học vấn</h2>
+				<i class="ic-pencil"></i>
+				<ul>
+					<li>
+						Tốt nghiệp cấp 3 trường THPT Võ Thị Sáu TPHCM
+						<p>2008 - 2009</p>
+						Tốt nghiệp xếp hạng khá
+					</li>
+					<li>
+						FUNix
+						<p>02/2023 - Hiện tại</p>
+						<p>Chuyên ngành: Java Developer</p>
+						<p>GPA: Hiện đang học</p>
+					</li>
+				</ul>
+
+				<div class="view-more">
+					<div>
+						<p>View more</p>
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+
+				<button class="btn btn-primary">View Less</button>
+			</div>
+
+			<!-- cac hoat dong nhu tham gia cac cuoc thi  -->
+			<div id="activity">
+				<h2>Hoạt động</h2>
+				<i class="ic-toolbox"></i>
+				<ul>
+					<li>
+						Đi hát ở openshare cafe
+						<p>2019</p>
+					</li>
+					<li>
+						Đạt giải nhì cuộc thi hát diepkhuc.com
+						<p>2017</p>
+						Giá trị giải thưởng 5.000.000 VNĐ
+					</li>
+				</ul>
+
+				<div class="view-more">
+					<div>
+						<p>View more</p>
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+
+				<button class="btn btn-primary">View Less</button>
+			</div>
+
+			<!-- so thich  -->
+			<div id="hobby">
+				<h2>Sở thích</h2>
+				<i class="ic-telescope"></i>
+				<div class="hobby-container">
+					<div>
+						<i class="ic-megaphone"></i>
+						<p>Âm nhạc</p>
+					</div>
+					<div>
+						<i class="ic-strategy"></i>
+						<p>Chơi game</p>
+					</div>
+					<div>
+						<i class="ic-hotairballoon"></i>
+						<p>Lập trình</p>
+					</div>
+					<div>
+						<i class="ic-basket"></i>
+						<p>Đọc sách</p>
+					</div>	
+				</div>
+
+				<div class="view-more">
+					<div>
+						<p>View more</p>
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+
+				<button class="btn btn-primary">View Less</button>
+				
+			</div>
+			
+			<!-- biet bao nhieu ngon ngu, bao nhieu diem, thanh ngang de the hien diem  -->
+			<div id="language">
+				<h2>Ngôn ngữ</h2>
+				<i class="ic-mic"></i>
+				<ul>
+					<li>
+						Tiếng Anh
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						Tiếng Nhật: không
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</li>
+				</ul>
+
+				<div class="view-more">
+					<div>
+						<p>View more</p>
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+
+				<button class="btn btn-primary">View Less</button>
+			</div>
+	
+			<!-- ky nang lap trinh  -->
+			<div id="skill">
+				<h2>Kỹ năng</h2>
+				<i class="ic-tools-2"></i>
+				<ul>
+					<li>
+						HTML/CSS: Fundamental
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						Javascript: Fundamental
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						C: Fundamental
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</li>
+					<li>
+						Bootstrap 5: Fundamental
+						<div>
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</li>
+				</ul>
+
+				<div class="view-more">
+					<div>
+						<p>View more</p>
+						<i class="fa-solid fa-caret-down"></i>
+					</div>
+				</div>
+
+				<button class="btn btn-primary">View Less</button>
+			</div>
+		</section>
+	</div>
+		<!-- nhom 5 khung-->
+
+
+	<div class="container-fluid">
+		<!-- ve bang cap, chung chi dang co  -->
+		<section id="certificate" class="bg-grey">
+			<div class="container p-0 mw-100">
+				<h2 class="section-title">
+					Chứng chỉ - Giải thưởng
+				</h2>
+				<div class="cer-grid">
+					<div class="container-cer">
+						<img src="./images/Cert_DBI.png" alt="Chung chi">
+						<div>
+							<h3>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h3>
+							<P>-Chứng chỉ thuộc chương trình CCDN</P>
+							<p>-GPA: 8.6</p>	
+						</div>
+					</div>
+
+					<div class="container-cer">
+						<img src="./images/Cert_PRF.png" alt="Chung chi">
+						<div>
+							<h3>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h3>
+							<P>-Chứng chỉ thuộc chương trình CCDN</P>
+							<p>-GPA: 8.9</p>	
+						</div>
+					</div>
+					<hr>
+					<div class="container-cer">
+						<img src="./images/Cert_WEB.png" alt="Chung chi">
+						<div>
+							<h3>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h3>
+							<P>-Chứng chỉ thuộc chương trình CCDN</P>
+							<p>-GPA: 8.0</p>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+		<!-- cac du an da lam  -->
+		<!-- cau truc project > container > flex > {3 container-pro } > flex-child-pro-->
+	<div class="container-fluid">
+		<section id="project">
+			<div class="container mw-100 px-sm-5">
+				<h2 class="section-title">
+					Dự án
+				</h2>
+				<!-- lop chua 3 khung tuong duong 3 du an da lam duoc va lop nay duoc thiet ke giao dien flex  -->
+				<div class="flex">
+
+					<!-- 3 khung o duoi deu trinh bay noi dung tuan tu 
+					moi khung co noi dung bao gom 3 phan: 
+						1: anh (do rong 100% so voi khung chua, khung chua nay co width = 61% so voi kich thuoc toan trang 1170px trong dong 29 file css.style)
+						2: tieu de du an 
+						3: flexbox
+						4: table -->
+					<!-- khung du an 1  -->
+					<div class="container-pro"> 
+						<!-- 1 -->
+						<a href="./project_Charter.html"><img src="./images/project_1.png" alt="Du an 1"></a>
+						<!-- 2 -->
+						<div class="title">CV Cá nhân</div>
+						<!-- 3 thiet ke theo flex  -->
+						<div class="flex-child-pro">
+							<span>2021</span>
+							<div>
+								<i class="icon-user-1"></i>
+								<span>Funix</span>
+							</div>
+							<div>
+								<i class="icon-lamp"></i>
+								<span>Developer</span>
+							</div>
+						</div>
+						<!-- 3 thiet ke theo flex  -->
+
+						<table>
+							<tr>
+								<td>Mô tả</td>
+								<td>Trang Web CV cá nhân online. Gồm các thông
+									thi cá nhân cũng như kỹ năng nghề nghiệp
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Nhiệm vụ
+								</td>
+								<td>
+									-Phát triển code - Review code - 
+									Tối ưu code - Xử lý lỗi
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Công nghệ
+								</td>
+								<td>
+									-HTML, CSS
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!-- khung du an 1 -->
+
+					<!-- khung du an 2 -->
+					<div class="container-pro">
+						<a href="./project_Charter.html"><img src="./images/project_2.png" alt="Du an 2"></a>
+						<div class="title">TRANG WEB QUẢN LÝ THÚ CƯNG</div>
+
+						<!-- Thiet ke layout flex  -->
+						<div class="flex-child-pro">
+							<span>2021</span>
+							<div>
+								<i class="icon-user-1"></i>
+								<span>Funix</span>
+							</div>
+							<div>
+								<i class="icon-lamp"></i>
+								<span>Developer</span>
+							</div>
+						</div>
+
+						<!-- thiet ke layout table -->
+						<table>
+							<tr>
+								<td>Mô tả</td>
+								<td>
+									Ứng dụng giúp quản lý các thông tin
+									của thú cưng như: Cân nặng, giống,
+									tình trạng tiêm chủng,... Bao gồm các 
+									chức năng thêm / sửa / xóa.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Nhiệm vụ
+								</td>
+								<td>
+									-Phát triển code - Review code - 
+									Tối ưu code - Xử lý lỗi
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Công nghệ
+								</td>
+								<td>
+									-HTML, CSS, Javascript
+								</td>
+							</tr>
+						</table>
+						<!-- thiet ke layout table  -->
+					</div>
+					<!-- khung du an 2 -->
+
+					<!-- khung du an 3 -->
+					<div class="container-pro">
+						<a href="./project_Charter.html"><img src="./images/project_3.png" alt="Du an 3"></a>
+						<div class="title">TRANG WEB XEM TIN TỨC</div>
+
+						<!-- thiet ke layout flex  -->
+						<div class="flex-child-pro">
+							<span>2021</span>
+							<div>
+								<i class="icon-user-1"></i>
+								<span>Funix</span>
+							</div>
+							<div>
+								<i class="icon-lamp"></i>
+								<span>Developer</span>
+							</div>
+						</div>
+						<!-- thiet ke layout flex  -->
+
+						<!-- thiet ke layout table  -->
+						<table>
+							<tr>
+								<td>Mô tả</td>
+								<td>
+									Trang Web xem tin tức từ nhiều nguồn
+									khác nhau, người dùng có thể tìm kiếm
+									các tin tức dựa theo các từ khóa.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Nhiệm vụ
+								</td>
+								<td>
+									-Phát triển code - Review code - 
+									Tối ưu code - Xử lý lỗi
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Công nghệ
+								</td>
+								<td>
+									-HTML, CSS, Javascript
+								</td>
+							</tr>
+						</table>
+						<!-- thiet ke layout table  -->
+					</div>
+					<!-- khung du an 3 -->
+				</div>
+
+			</div>
+		</section>
+	</div>
+		<!-- tao footer theo layout flex  -->
+	<div class="container-fluid">
+		<div id="footer" class="bg-grey">
+			<div class="container">
+				<ul>
+					<li><i class="icon-facebook"></i><p>Facebook</p></li>
+					<li><i class="icon-linkedin"></i><p>Linkedin</p></li>
+					<li><i class="icon-github-circled"></i><p>Github</p></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script> -->
+	<script src="https://kit.fontawesome.com/928090e9db.js" crossorigin="anonymous"></script>
+	<script src="./js/script.js"></script>
+</body>
+</html>
